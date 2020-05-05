@@ -69,8 +69,17 @@ const getListings = async (address, searchTerm, pageUrl=listingUrl) => {
                     if (curPage > maxPages - 1)
                         break;
 
+                    let previousPage = curPage
                     await page.click('div.Head_C span.PageRight')
-                    await page.waitFor(1000);
+                    while(true) {
+                        curPage = parseInt(await page.$eval('#curPCA', elem => elem.value));
+                        if (previousPage !== curPage) {
+                            break;
+                        }
+
+                        await page.waitFor(10);
+                    }
+
                 }
 
                 let data = {
