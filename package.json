@@ -16,7 +16,7 @@
     "lodash": "^4.17.15",
     "minimist": "^1.2.5",
     "moment": "^2.24.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "paginated-listings-scraper": "^2.1.0",
     "puppeteer": "^2.1.1",
     "puppeteer-core": "^2.0.0",
